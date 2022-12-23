@@ -32,17 +32,25 @@ void printAccum(int storeCals[], int size) {
 
 int main( int argc, char *argv[] ) {
 	
+	ushort lead_elves = TOP;
+
+	if(argc > 1) {
+		lead_elves = atoi(*(argv+1));
+	} else {
+		printf("You can specify how many TOP elves' calories you want to count.\nThe default number of elves is 5.\n\n");
+	}
+
 	// File pointers
     FILE* ptr;
 	char buffer[255];
     ptr = fopen("input.txt", "r");
 
 	// AoC Variables
-	int storeCals[TOP];
-	initVector(storeCals, TOP);
+	int storeCals[lead_elves];
+	initVector(storeCals, lead_elves);
 	
 	// Do it as many times as elves'calories you want to retrieve
-	for(int i = 0; i < TOP; ++i) {
+	for(int i = 0; i < lead_elves; ++i) {
 		int cals = 0;
 		int maxCals = 0;
 
@@ -52,7 +60,7 @@ int main( int argc, char *argv[] ) {
 
 				// Compare if the cals (accumulated) are already stored in the vector
 				// in case this is the max, amount.
-				for(int j = 0; j < TOP; ++j)
+				for(int j = 0; j < lead_elves; ++j)
 					if (cals == storeCals[j])
 						storeFlag = 0;	
 
@@ -73,8 +81,8 @@ int main( int argc, char *argv[] ) {
 
 	fclose(ptr);
 
-	printStoredCals(storeCals, TOP);
-	printAccum(storeCals, TOP);
+	printStoredCals(storeCals, lead_elves);
+	printAccum(storeCals, lead_elves);
 
 	return 0;
 }
