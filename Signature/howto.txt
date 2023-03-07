@@ -1,0 +1,8 @@
+Apple -> https://www.mailjerry.com/create-and-add-a-html-signature-to-apple-mail/
+    1. Sobreescribe tu firma con un texto (el que sea)
+    2. Cierra la app de Mail
+    3. Con el Finder: "Ir" -> "Ir a la carpeta" -> "/Users/\<tu-usuario\>/Library/Mail/V_XXX/MailData/Signatures"
+    3a. Desbloquea el fichero de firma (Obtener Información -> Desbloquear)
+    4. Borra el contenido de abajo y pega la nueva firma
+    5. Bloquea el fichero
+    6. Abre Mail y Listo!
