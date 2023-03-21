@@ -6,3 +6,8 @@ Apple -> https://www.mailjerry.com/create-and-add-a-html-signature-to-apple-mail
     4. Borra el contenido de abajo y pega la nueva firma
     5. Bloquea el fichero
     6. Abre Mail y Listo!
+	
+Thunderbird -> 
+	1. Click derecho en la cuenta "UMU Correo"
+	2. Signature text (habilitar el check "Use HTML")
+	3. Pegar el codigo en HTML
